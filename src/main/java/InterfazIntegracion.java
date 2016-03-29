@@ -52,7 +52,7 @@ public class InterfazIntegracion {
         html.append("<table border=1>");
         html.append("<tr>");
         html.append("<th></th>");
-        html.append("<th>VS</th>");
+        html.append("<th>PROGRAMA 5</th>");
         html.append("<th>S</th>");
         html.append("<th>M</th>");
         html.append("<th>L</th>");
