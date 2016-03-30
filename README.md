@@ -12,7 +12,7 @@ Tener istalado [Heroku Toolbelt](https://toolbelt.heroku.com/).
 
 ```sh
 $ git clone https://github.com/leonfloch/NumericalIntegration-.git
-$ cd Programa5
+$ cd NumericalIntegration-
 $ mvn install
 $ heroku local web
 ```
@@ -21,15 +21,15 @@ Para correr la aplicación: [localhost:5000](http://localhost:5000/)
 
 ## Correr en Heroku
 
-[programa4-76459.herokuapp.com](https://programa4-76459.herokuapp.com)
+[programa5-10934.herokuapp.com](https://programa5-10934.herokuapp.com)
 
 
 
 ## Clonar desde Heroku
 
 ```sh
-$ heroku git:clone -a programa4-76459
-$ cd programa4-76459
+$ heroku git:clone -a programa5-10934
+$ cd programa5-10934
 ```
 
 ## Documentación
