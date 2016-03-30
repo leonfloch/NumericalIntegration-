@@ -21,9 +21,11 @@ public class Integracion {
      */
     private static final String TABLA_DOF = "data/tableDof.txt";
     
+    /**
+     * contiene los datos esperados
+     */
+    private static final String DATOS_ESPERADOS = "data/ExpectedValue.txt";
     
-    
-            
     
     /**
      * Constructor
@@ -44,6 +46,7 @@ public class Integracion {
                 
         LinkedList datosX = Archivo.obtenerDatos(TABLA_X);
         LinkedList datosDof = Archivo.obtenerDatos(TABLA_DOF);
+        LinkedList datosExp = Archivo.obtenerDatos(DATOS_ESPERADOS);        
         
         Iterator iteradorDataX = datosX.iterator();
         int cont = 0;
@@ -53,7 +56,7 @@ public class Integracion {
                         
             double result = this.calcularIntegral(valorX, dof);
             
-            Resultado resultado = new Resultado(String.valueOf(valorX), dof, 0, result);
+            Resultado resultado = new Resultado(String.valueOf(valorX), dof, (double)datosExp.get(cont), result);
             resultados.add(resultado);
             
            cont++; 
