@@ -38,8 +38,8 @@ public class IntegracionTest extends TestCase {
     @Test
     //@METODO
     public void test1() {
-        
-        
+        double result = integracion.calcularIntegral(1.1, 9);
+        assertEquals(0.35006, result);
     }
     
     /**
@@ -48,7 +48,8 @@ public class IntegracionTest extends TestCase {
     @Test
     //@METODO
     public void test2() {                        
-        
+        double result = integracion.calcularIntegral(1.1812, 10);
+        assertEquals(0.117, result);
     }
     
     /**
@@ -57,7 +58,8 @@ public class IntegracionTest extends TestCase {
     @Test
     //@METODO
     public void test3() {
-        
+        double result = integracion.calcularIntegral(2.750, 30);
+        assertEquals(0.15756, result);
     }
     
     

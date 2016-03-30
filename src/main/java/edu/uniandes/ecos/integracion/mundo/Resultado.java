@@ -15,27 +15,38 @@ public class Resultado {
     /**
      * representa los grados de libertad
      */
-    private long dof;
+    private double dof;
     
     /**
      * valor de la integral esperado
      */
-    private long p;
+    private double p;
     
     /**
      * valor de la integral actual
      */
-    private long pActual;
+    private double pActual;
     
     
 
+    
+
     /**
-     * Constructor
+     * 
+     * @param x
+     * @param dof
+     * @param p
+     * @param pActual 
      */
     //@METODO
-    public Resultado() {
-        
+    public Resultado(String x, double dof, double p, double pActual) {
+        this.x = x;
+        this.dof = dof;
+        this.p = p;
+        this.pActual = pActual;
     }
+    
+    
 
     /**
      * 
@@ -60,7 +71,7 @@ public class Resultado {
      * @return 
      */
     //@METODO
-    public long getDof() {
+    public double getDof() {
         return dof;
     }
 
@@ -69,7 +80,7 @@ public class Resultado {
      * @param dof 
      */
     //@METODO
-    public void setDof(long dof) {
+    public void setDof(double dof) {
         this.dof = dof;
     }
 
@@ -78,7 +89,7 @@ public class Resultado {
      * @return 
      */
     //@METODO
-    public long getP() {
+    public double getP() {
         return p;
     }
 
@@ -87,7 +98,7 @@ public class Resultado {
      * @param p 
      */
     //@METODO
-    public void setP(long p) {
+    public void setP(double p) {
         this.p = p;
     }
 
@@ -96,7 +107,7 @@ public class Resultado {
      * @return 
      */
     //@METODO
-    public long getpActual() {
+    public double getpActual() {
         return pActual;
     }
 
@@ -105,7 +116,7 @@ public class Resultado {
      * @param pActual 
      */
     //@METODO
-    public void setpActual(long pActual) {
+    public void setpActual(double pActual) {
         this.pActual = pActual;
     }
 

@@ -143,6 +143,7 @@ public class Cal {
      * @param datos lista de datos a calcular
      * @return lista de datos calculados
      */
+    //@METODO
     public static LinkedList calcularLogNatural(LinkedList datos) {
         LinkedList resultado = new LinkedList();        
         Iterator iteradorDatos = datos.iterator();
@@ -154,15 +155,29 @@ public class Cal {
     }
     
     /**
-     * realiza el calculo gamma para un valor
+     * realiza el calculo del factorial para el valor dado
      * @param valor
      * @return valor calculado 
      */
-    public static long calcularGamma(long valor) {
-        long resultado = 0;
-        //TODO
-        
-        return resultado;
+    //@METODO
+    public static double factorial(double valor) { 
+        if (valor <= 0) {
+            return 1;
+        } else {
+            return valor*(factorial(valor-1));
+        }
+    }
+    
+    /**
+     * calcula el multiplicativo para el valor dado
+     * @param valor
+     * @return 
+     */
+    //@METODO
+    public static int multiplicativo(int valor) {        
+        if (valor == 0 || valor == 10)
+            return 1;
+        return valor%2 == 0 ? 2 : 4;
     }
     
     

@@ -1,5 +1,8 @@
 
+import edu.uniandes.ecos.integracion.mundo.Cal;
 import edu.uniandes.ecos.integracion.mundo.Integracion;
+import edu.uniandes.ecos.integracion.mundo.Resultado;
+import java.math.BigDecimal;
 import java.util.Iterator;
 import java.util.LinkedList;
 
@@ -21,7 +24,7 @@ public class InterfazIntegracion {
      * @param args
      */
     //@METODO
-    public static void main(String[] args) {
+    public static void main(String[] args) {        
         Integracion integracion = new Integracion();        
         mostrarResultados(integracion.iniciarCalculos());
     }
@@ -47,30 +50,29 @@ public class InterfazIntegracion {
     //@METODO
     public static StringBuffer getHtml(LinkedList result) {
         StringBuffer html = new StringBuffer();
-        html.append("<!DOCTYPE html>");
-        html.append("<html>");
         html.append("<table border=1>");
+        html.append("<tr>");        
+        html.append("<th colspan=\"2\">Test</th>");
+        html.append("<th>Expected Value</th>");
+        html.append("<th>Actual Value</th>");
+        html.append("</tr>");
         html.append("<tr>");
-        html.append("<th></th>");
-        html.append("<th>PROGRAMA 5</th>");
-        html.append("<th>S</th>");
-        html.append("<th>M</th>");
-        html.append("<th>L</th>");
-        html.append("<th>VL</th>");
+        html.append("<th>X</th>");
+        html.append("<th>Dof</th>");
+        html.append("<th>P</th>");
+        html.append("<th></th>");        
         html.append("</tr>");
 
         Iterator iterador = result.iterator();        
-//        while (iterador.hasNext()) {
-//            Resultado res = (Resultado) iterador.next();
-//            html.append("<tr>");
-//            html.append("<td> Test " + res.getNombre() + "</td>");
-//            html.append("<td>" + res.getVs() + "</td>");
-//            html.append("<td>" + res.getS() + "</td>");
-//            html.append("<td>" + res.getM() + "</td>");
-//            html.append("<td>" + res.getL() + "</td>");
-//            html.append("<td>" + res.getVl() + "</td>");
-//            html.append("</tr>");
-//        }
+        while (iterador.hasNext()) {
+            Resultado res = (Resultado) iterador.next();
+            html.append("<tr>");
+            html.append("<td> 0 to x= " + res.getX() + "</td>");
+            html.append("<td>" + res.getDof() + "</td>");
+            html.append("<td>" + res.getP() + "</td>");
+            html.append("<td>" + res.getpActual() + "</td>");            
+            html.append("</tr>");
+        }
         html.append("</table>");
         html.append("</body>");
         html.append("</html>");
