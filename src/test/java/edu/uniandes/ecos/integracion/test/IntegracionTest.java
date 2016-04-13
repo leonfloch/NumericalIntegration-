@@ -49,7 +49,7 @@ public class IntegracionTest extends TestCase {
     //@METODO
     public void test2() {                        
         double result = integracion.calcularIntegral(1.1812, 10);
-        assertEquals(0.117, result);
+        assertEquals(0.36757, result);
     }
     
     /**
@@ -59,7 +59,7 @@ public class IntegracionTest extends TestCase {
     //@METODO
     public void test3() {
         double result = integracion.calcularIntegral(2.750, 30);
-        assertEquals(0.15756, result);
+        assertEquals(0.49500, result);
     }
     
     
